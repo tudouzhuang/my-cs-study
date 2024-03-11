@@ -120,8 +120,7 @@ def has_path(t, word):
     elif label(t) == word[0]:
         for branch in branches(t):
             if label(branch) == word[1]:
-                if has_path(branch, word[1:]):
-                    return True
+                return has_path(branch, word[1:])
     return False
             
 
